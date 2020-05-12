@@ -1,6 +1,6 @@
-async function createHeatMap(businessId){
+async function createHeatMap(checkin_link,businessId){
     // access data
-    var url = "https://raw.githubusercontent.com/SagarParekh/Yelp_Data_Analysis/master/tempeCheckinNew.json";
+    var url = checkin_link;
     let dataset = await d3.json(url);
     var checkIns = dataset.filter( (data) => data.business_id === businessId).map(data => data.checkin)[0];
     var checkInList = []

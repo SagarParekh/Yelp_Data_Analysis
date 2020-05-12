@@ -1,7 +1,7 @@
 restaurants = [];
 
-function get_restaurant(businessid){
-   var url = "https://raw.githubusercontent.com/mageshsridhar/yelp-restaurant-data/master/business.json"
+function get_restaurant(business_link,businessid){
+   var url = business_link;
   d3.json(url)
   .then(function(data) {
   //console.log(data['businesses']);

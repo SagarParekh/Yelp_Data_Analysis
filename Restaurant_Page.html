@@ -7,18 +7,20 @@
 <title>Restaurant Page</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="Restaurant_Page.css"/>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=WLkcBm44IaAkxFLrsejS6ulmOrgOsDZjzPRQmQ4ihzGSJ6QUY8JUKy5mE_LE9fcIS1TDb1KKYKXq5sV1YhrJY73XVl5JEuTQ2Y8vVYjP0p0nfNY-VNUx6K6SoDUyXxNFUgq3ScwrfpzD-ToYirhJUDWxdXoJ9uk_aWTOZxXLDzpfjdYlb6My9Pqtrr37fXSwYtJR8okAp9saMvfY6CJBelqcKTxjpWq_GlXlAj-8-If2NG7CXS7kIH30d2zRjaLDKNRk7KnO_NjTQhXw953XOxU_sENZbSaG0eryt7dIkRUv7U0cm43nEfDB-i_SGAUrhCJjB8aR92DFMfsggb-khCaG3L3TD6v9k1thbiNpLtmcLRl1xrm6Qr4FVC0CO8kYMV9XwJmsc_syrQP7BdGTM67B5qd7GM1X83WBcHN23s348aTHnpkCBvuwZckyPMkbYW9RWtjL19u1A0jcpLdGWLBrz-9XwRDNtHsGVdOEfltDQVQgBrEye5sCvtTB_92pnhAxd4-L1ADBHByeNnBavFz7G3k-lCz5UH0fhrH43YlMnZaxz7eO4pwXGsDJxVRodJWCZe2zignPvFpXuSb3YefouohPHYUGwMpe2F0ObxORgYaq7X2XX8zYAo85vQc2Qvb1QTqQ1VMwNXBh-rVCMrZhZUzc8Ocsx5zBp3_FriXRY7pH6kD-nTBLNyyEcefK-Vk71dAINShAeGKotKF_1Fp5Vrd83FHWtiy4KdM8IPqRtb2lw9HTIhwJTZIMXMchh2wGyWysbIpHbnVB1YGDerG0Go9UUWm0Ztk_iW9gww6MJcJSu2Vc4cTVMPlxeMvg-C4tolca6hyCAnnV7_vtsLGS7z2P2a1qWHQCZzg7vC-xxWR1NOmWd6uZCA-joI00iQvxNJvgMZIPRGkx-DLLH9y6NW4pk-mlCO7KLO-dKDFeKABWe9hNJceqvEnhk3yF6JCkTEfgjxNi2JK3PMOdjRV_VSZhBTMC1OR44xbjZgF363JqCMBwwoOcnkFzyxaRh2971YMdwWBAVA_8IbP147Otvt3mfZs57ucioBPzeLzCK7BQ3WJ_gtreGj4BCQRr7QR8L9Lb_s-4S8GZTrMUw-bjxl0SvqSQ8rbnAktF6litmRL2PWMQ4yURQG-zZeP-O_6tocgQbmzJQNXP3CgNcqQyebNZ709WvgAXp08Dcy2aU1zDM8jS8Jvf17cZoNBYfLy09QlSHDsez9ykuxAg6g" nonce="bf0adc7aad15fc28132639d8d6a07a8d" charset="UTF-8"></script><script id="applicationScript">
-///////////////////////////////////////
-// INITIALIZATION
-///////////////////////////////////////
-
-/**
- * Functionality for scaling, showing by media query, and navigation between multiple pages on a single page.
- * Code subject to change.
- **/
-
+<a id="reviewlink" href=""></a>
+<a id="businesslink" href=""></a>
+<a id="checkinlink" href=""></a>
+<!-- <script type="text/javascript" src="https://ff.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=WLkcBm44IaAkxFLrsejS6ulmOrgOsDZjzPRQmQ4ihzGSJ6QUY8JUKy5mE_LE9fcIS1TDb1KKYKXq5sV1YhrJY73XVl5JEuTQ2Y8vVYjP0p0nfNY-VNUx6K6SoDUyXxNFUgq3ScwrfpzD-ToYirhJUDWxdXoJ9uk_aWTOZxXLDzpfjdYlb6My9Pqtrr37fXSwYtJR8okAp9saMvfY6CJBelqcKTxjpWq_GlXlAj-8-If2NG7CXS7kIH30d2zRjaLDKNRk7KnO_NjTQhXw953XOxU_sENZbSaG0eryt7dIkRUv7U0cm43nEfDB-i_SGAUrhCJjB8aR92DFMfsggb-khCaG3L3TD6v9k1thbiNpLtmcLRl1xrm6Qr4FVC0CO8kYMV9XwJmsc_syrQP7BdGTM67B5qd7GM1X83WBcHN23s348aTHnpkCBvuwZckyPMkbYW9RWtjL19u1A0jcpLdGWLBrz-9XwRDNtHsGVdOEfltDQVQgBrEye5sCvtTB_92pnhAxd4-L1ADBHByeNnBavFz7G3k-lCz5UH0fhrH43YlMnZaxz7eO4pwXGsDJxVRodJWCZe2zignPvFpXuSb3YefouohPHYUGwMpe2F0ObxORgYaq7X2XX8zYAo85vQc2Qvb1QTqQ1VMwNXBh-rVCMrZhZUzc8Ocsx5zBp3_FriXRY7pH6kD-nTBLNyyEcefK-Vk71dAINShAeGKotKF_1Fp5Vrd83FHWtiy4KdM8IPqRtb2lw9HTIhwJTZIMXMchh2wGyWysbIpHbnVB1YGDerG0Go9UUWm0Ztk_iW9gww6MJcJSu2Vc4cTVMPlxeMvg-C4tolca6hyCAnnV7_vtsLGS7z2P2a1qWHQCZzg7vC-xxWR1NOmWd6uZCA-joI00iQvxNJvgMZIPRGkx-DLLH9y6NW4pk-mlCO7KLO-dKDFeKABWe9hNJceqvEnhk3yF6JCkTEfgjxNi2JK3PMOdjRV_VSZhBTMC1OR44xbjZgF363JqCMBwwoOcnkFzyxaRh2971YMdwWBAVA_8IbP147Otvt3mfZs57ucioBPzeLzCK7BQ3WJ_gtreGj4BCQRr7QR8L9Lb_s-4S8GZTrMUw-bjxl0SvqSQ8rbnAktF6litmRL2PWMQ4yURQG-zZeP-O_6tocgQbmzJQNXP3CgNcqQyebNZ709WvgAXp08Dcy2aU1zDM8jS8Jvf17cZoNBYfLy09QlSHDsez9ykuxAg6g" nonce="bf0adc7aad15fc28132639d8d6a07a8d" charset="UTF-8"> </script> -->
+<script>
+var review_link = document.getElementById('reviewlink');
+review_link.href = "https://raw.githubusercontent.com/SagarParekh/Yelp_Data_Analysis/master/tempeReview.json";
+var business_link = document.getElementById('businesslink');
+business_link.href = "https://raw.githubusercontent.com/SagarParekh/Yelp_Data_Analysis/master/business.json";
+var checkin_link = document.getElementById('checkinlink');
+checkin_link.href = "https://raw.githubusercontent.com/SagarParekh/Yelp_Data_Analysis/master/tempeCheckinNew.json";
+</script>
+<script id="applicationScript">
 if (window.console==null) { window["console"] = { log : function() {} } }; // some browsers do not set console
-
 var Application = function() {
 	// event constants
 	this.NAVIGATION_CHANGE = "viewChange";
@@ -2426,9 +2428,9 @@ var Application = function() {
 	window.addEventListener("load", self.onloadHandler);
 	window.document.addEventListener("DOMContentLoaded", self.onloadHandler);
 }
-
 window.application = new Application();
 </script>
+
 <script type ="text/javascript" src="recommend.js"></script>
 <script type ="text/javascript" src="AFINN.json"></script>
 <script type ="text/javascript" src="sentiment.js"></script>
@@ -2443,14 +2445,14 @@ window.application = new Application();
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 <script src="heatmap.js"></script>
 <script>
-        createHeatMap(b_id);
+        createHeatMap(checkin_link,b_id);
 </script>
 <script>
-	filter_reviews(b_id);
+	filter_reviews(review_link,b_id);
 </script>
 <script type="text/javascript">
 	console.log("sentiment started");
-	get_restaurant(b_id);
+	get_restaurant(business_link,b_id);
 </script>
 </head>
 <body>
@@ -2501,8 +2503,9 @@ window.application = new Application();
 		</rect>
 	</svg>
         <script src="rating.js"></script>
+  <a id="reviewlink" href=""></a>
     <script>
-    createRating(b_id);
+      createRating(review_link,b_id);
     </script>
 	<div id="Ratings">
 		<span>Ratings</span>

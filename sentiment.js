@@ -16,7 +16,7 @@ Array.prototype.byCount = function(){
   });
 }
 
-function filter_reviews(businessid){
+function filter_reviews(review_link,businessid){
   reviews = [];
   positive=[];
   negative =[];
@@ -24,7 +24,7 @@ function filter_reviews(businessid){
   positive_reviews =0;
   negative_reviews=0;
   neutral_reviews = 0;
-  var url = "https://raw.githubusercontent.com/chetan015/yelp-data-viz/master/tempeReview.json";
+  var url = review_link;
   d3.json(url)
   .then(data => countryNames = data)
   .then(function(data) {
@@ -102,7 +102,7 @@ function sentiment(phrase) {
     words = [],
     positive = [],
     negative = [];
-    neutral = []; 
+    neutral = [];
   console.log(tokens);
 
   // Iterate over tokens

@@ -1,5 +1,5 @@
-function createRating(businessId) {
-    var url = "https://raw.githubusercontent.com/SagarParekh/Yelp_Data_Analysis/master/tempeReview.json";
+function createRating(review_link,businessId) {
+    var url = review_link;
 Plotly.d3.json(url, function(data){
     var rand_rows=[]
     for(var i=0; i<data.length; i++){
