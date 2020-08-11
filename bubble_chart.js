@@ -2,13 +2,13 @@ function bubbleChart() {
 		var width = 400,
 		height = 700,
 		marginTop = 5,
-		minRadius = 20,
-		maxRadius = 70,
+		minRadius = 10,
+		maxRadius = 60,
 		columnForColors = "category",
 		columnForTitle = "Name",
 		columnForCircleTitle = "Name",
 		columnForRadius = "count",
-		forceApart = -200,
+		forceApart = -120,
 		unitName="restaurants",
 		customColors=false,
 		customRange,
@@ -179,7 +179,7 @@ function bubbleChart() {
 	        
 	        // Add legend
 	        var legend = chartSVG.selectAll('.legend')
-	            .data(["[1-45)", "[45-90)", "[90-135)", "[135-300)"])
+	            .data(["[1-45)", "[45-90)", "[90-135)", "[135-180)"])
 	            .enter().append('g')
 	            .attr("class", "legend")
 	            .attr("transform", function (d, i) {

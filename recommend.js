@@ -1,7 +1,7 @@
 restaurants = [];
 
-function get_restaurant(business_link,businessid){
-   var url = business_link;
+function get_restaurant(businessid){
+   var url = "https://raw.githubusercontent.com/mageshsridhar/yelpdatavisualization/master/Project/business.json"
   d3.json(url)
   .then(function(data) {
   //console.log(data['businesses']);
@@ -11,19 +11,18 @@ function get_restaurant(business_link,businessid){
    document.getElementById('stars').innerHTML = restaurant[0]['stars'];
    document.getElementById('Restaurant_Address').innerHTML = restaurant[0]['address'];
           recommend_restaurants(restaurant);
-
+  
 });
   //console.log(all_restaurants);
 }
 
 function recommend_restaurants(restaurant){
 	//console.log(restaurant[0]['stars']);
-  var url = "https://raw.githubusercontent.com/mageshsridhar/yelp-restaurant-data/master/business.json"
-	d3.json(url)
+	d3.json("business.json")
 	.then(function(data){
-		restaurants = data['businesses'].filter(function(d){
-		return ((d.stars >= restaurant[0].stars) &&
-			(d.cuisine == restaurant[0].cuisine) &&
+		restaurants = data['businesses'].filter(function(d){ 
+		return ((d.stars >= restaurant[0].stars) && 
+			(d.cuisine == restaurant[0].cuisine) && 
 			(d.business_id != restaurant[0].business_id) &&
 			(distance(d.latitude,d.longitude,restaurant[0].latitude,restaurant[0].longitude) <= 8))});
 		//console.log(restaurants);
@@ -34,7 +33,7 @@ function recommend_restaurants(restaurant){
         rec_res1.style.cursor = 'pointer';
         rec_res1.onclick = function() {
             var qString = "?"+ restaurants[0]['business_id'];
-            window.location.href = "Restaurant_Page.html" + qString;
+            window.location.href = "Restaurant_page.html" + qString;
             };
         }
         if(restaurants[1]['name']!=null)
@@ -45,8 +44,8 @@ function recommend_restaurants(restaurant){
         rec_res2.style.cursor = 'pointer';
         rec_res2.onclick = function() {
             var qString = "?"+ restaurants[1]['business_id'];
-            window.location.href = "Restaurant_Page.html" + qString;
-            };
+            window.location.href = "Restaurant_page.html" + qString;
+            }; 
         }
         if(restaurants[2]['name']!=null)
         {
@@ -56,8 +55,8 @@ function recommend_restaurants(restaurant){
         rec_res3.style.cursor = 'pointer';
         rec_res3.onclick = function() {
             var qString = "?"+ restaurants[2]['business_id'];
-            window.location.href = "Restaurant_Page.html" + qString;
-            };
+            window.location.href = "Restaurant_page.html" + qString;
+            };    
         }
 
 	});

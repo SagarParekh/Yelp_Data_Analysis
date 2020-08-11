@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bubble Chart</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+  <style type="text/css">
+    body {
+      line-height: 1.5;
+      font-family: Open Sans MS, Open Sans, cursive;
+    }
+    svg {
+      margin: auto;
+      display: block;
+    }
+    .pointer, circle {
+      cursor: pointer;
+      user-select: none;
+    }
+    /*Styling for the lines connecting the labels to the slices*/
+    polyline{
+        opacity: .2;
+        stroke: black;
+        stroke-width: 1px;
+        fill: none;
+    }
+    
+    #countries-chart {
+      height: 900px;
+      /* border-right: 1px solid black;  */
+    }
+    #countries-chart>svg {
+      display: none;
+    }
+    .vertical-hr {
+      width  : 1px;
+      height   : 50%;  /* or 100px */
+      background: #555;
+    }
+    .selected {
+      fill: rgb(255, 127, 14) !important;
+    }
+    .hover {
+      fill: rgba(255, 127, 14, 0.3) !important;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .row>div {
+      /* float: left; */
+      width: 50%;
+    }
+    h1,h2,h3,h4 {
+      text-align: center;
+    }
+    .explanation {
+      width: 750px;
+      margin: auto;
+      margin-top: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <div>
+    <div id="countries-chart">
+      <h4 class="loading">Loading...</h4>
+      <svg></svg>
+    </div>
+    </div>
+    </div>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="bubble_chart.js"></script>
+  <script src="init.js"></script>
+</body>
+</html>

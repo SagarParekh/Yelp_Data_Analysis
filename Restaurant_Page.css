@@ -90,7 +90,7 @@
 	filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.161));
 	position: absolute;
 	overflow: visible;
-	width: 450px;
+	width: 596px;
 	height: 406px;
 	left: 140px;
 	top: 221px;
@@ -99,7 +99,7 @@
     position: absolute;
 	left: 140px;
 	top: 221px;
-    width: 430px;
+    width: 530px;
     height: 340px;
 }
 
@@ -107,16 +107,16 @@
 	filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.161));
 	position: absolute;
 	overflow: visible;
-	width: 570px;
+	width: 532px;
 	height: 406px;
-	left: 600px;
+	left: 692px;
 	top: 221px;
 }
 #Linegraph {
     position: absolute;
-	left: 600px;
+	left: 692px;
 	top: 221px;
-    width: 570px;
+    width: 480px;
     height: 350px;
 }
 .floating {  
@@ -298,18 +298,102 @@
 	top: 284.426px;
 	transform: matrix(1,0,0,1,0,0);
 }
+#ID5 {
+	position: absolute;
+	left: 497px;
+	top: 240px;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgba(0,235,200,1);
+}
+#ID4 {
+	position: absolute;
+	left: 642px;
+	top: 351px;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgba(0,235,200,1);
+}
+#ID3 {
+	position: absolute;
+	left: 586px;
+	top: 525px;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgba(0,235,200,1);
+}
+#ID1 {
+	position: absolute;
+	left: 345px;
+	top: 351px;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgba(0,235,200,1);
+}
+#ID2 {
+	position: absolute;
+	left: 408px;
+	top: 525px;
+	overflow: visible;
+	width: 9px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 14px;
+	color: rgba(0,235,200,1);
+}
+#ID5_Stars___1200_4_Stars___800 {
+	position: absolute;
+	left: 178px;
+	top: 414px;
+	overflow: visible;
+	width: 102px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: rgba(255,84,112,1);
+}
 .Icon_material_timeline {
 	overflow: visible;
 	position: absolute;
 	width: 33px;
 	height: 18px;
-	left: 638px;
+	left: 730px;
 	top: 261px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #Average_Ratings {
 	position: absolute;
-	left: 690px;
+	left: 772px;
 	top: 256px;
 	overflow: visible;
 	width: 155px;
